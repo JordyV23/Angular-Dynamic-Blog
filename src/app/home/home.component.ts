@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from '../services/contentful.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  constructor(private contentfulService:ContentfulService){}
+
+  ngOnInit():void {
+    this.contentfulService.getAllEntries();
+  }
 }

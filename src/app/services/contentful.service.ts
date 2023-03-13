@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
-import {createClient,Entry} from 'contentful'
+import { createClient, Entry } from 'contentful';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ContentfulService {
+  constructor() {}
 
-  constructor() { }
+  private client = createClient({
+    space: environment.spaceId,
+    accessToken: environment.accessToekn,
+  });
+
+  getAllEntries() {
+    this.client.getEntries().then(entries => console.log(entries));
+  }
 }
