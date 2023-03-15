@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
-//import { MarkdownModule } from 'ngx-markdown';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // MarkdownModule.forRoot(),
+    MarkdownModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

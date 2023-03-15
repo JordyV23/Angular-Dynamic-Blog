@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ContentfulService } from '../services/contentful.service';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 @Component({
   selector: 'app-blog-post',
@@ -21,4 +22,11 @@ export class BlogPostComponent {
       }
     )
   }
+
+  _returnHtmlFromRichText(richText:any) {
+    if (richText === undefined || richText === null || richText.nodeType !== 'document') {
+      return '<p>Error</p>';
+    }
+    return documentToHtmlString(richText);
+}
 }
