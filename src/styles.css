@@ -12,6 +12,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f1f1f1;
+  margin-bottom: 150px;
 }
 
 header div {
@@ -35,4 +37,67 @@ header div span {
 
 .logo-3 {
   letter-spacing: 20px;
+}
+
+.blog-posts-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.blog-posts-container img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.blog-posts-container h2 {
+  margin-bottom: 20px;
+}
+
+.blog-posts-container .author {
+  margin-bottom: 20px;
+}
+
+.blog-posts-container .summary {
+  margin-bottom: 20px;
+}
+
+.blog-posts-container a {
+  text-decoration: none;
+  background-color: #353535;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+.post-container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 150px;
+  background-color: #f1f1f1;
+  margin-top: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.post-container img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.post-container h2 {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.post-container p {
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.author{
+  color: #AAA;
 }
